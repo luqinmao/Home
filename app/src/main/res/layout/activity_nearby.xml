@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/topbar_nearby"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_light"
+        app:title_text="附近的人"
+        app:title_text_size="20sp"
+        app:title_text_color="@color/white"
+        app:left_src="@mipmap/return_white"
+        />
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clickable="true"
+        android:layout_below="@id/topbar_nearby"
+        />
+
+    <ImageView
+        android:id="@+id/btn_current_position"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:src="@mipmap/ic_position"
+        android:layout_marginLeft="10dp"
+        android:layout_marginBottom="50dp"
+        android:padding="8dp"
+        android:background="#fff"
+        />
+
+
+</RelativeLayout>

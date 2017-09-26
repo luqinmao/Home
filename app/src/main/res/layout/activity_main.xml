@@ -1,0 +1,81 @@
+<android.support.v4.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/sm_menu"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.lqm.home.widget.NoScrollViewPager
+            android:id="@+id/vp_content"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rg_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F6F6"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_home"
+                    style="@style/BottomTabStyle"
+                    android:drawableTop="@drawable/btn_tab_home_selector"
+                    android:text="首页" />
+
+                <RadioButton
+                    android:id="@+id/rb_chat"
+                    style="@style/BottomTabStyle"
+                    android:drawableTop="@drawable/btn_tab_chat_selector"
+                    android:text="聊天" />
+
+
+                <RadioButton
+                    android:id="@+id/rb_ba"
+                    style="@style/BottomTabStyle"
+                    android:drawableTop="@drawable/btn_tab_ba_selector"
+                    android:text="资讯" />
+
+                <RadioButton
+                    android:id="@+id/rb_find"
+                    style="@style/BottomTabStyle"
+                    android:drawableTop="@drawable/btn_tab_find_selector"
+                    android:text="发现" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/unread_msg_number"
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:gravity="center"
+                android:text="1"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                android:layout_marginLeft="150dp"
+                android:layout_marginTop="1dp"
+                android:visibility="visible"
+                android:background="@mipmap/bg_unread"/>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <include layout="@layout/layout_menu" />
+
+</android.support.v4.widget.DrawerLayout>

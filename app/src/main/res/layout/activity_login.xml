@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/login_topbar"
+        app:title_text="登录"
+        app:title_text_size="16sp"
+        android:background="@color/blue_light"
+        app:title_text_color="@color/white"
+        app:left_src="@mipmap/return_white"
+        android:layout_width="match_parent"
+        android:layout_height="42dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/edit_login_regist_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="乡吧号："
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/account_edit"
+            android:hint="请输入账号"
+            android:textColor="@color/text0"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_login_regist_selector"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="密码："
+            android:textColor="@color/black"
+            android:textSize="19sp" />
+
+        <EditText
+            android:id="@+id/token_edit"
+            android:hint="填写密码"
+            android:inputType="textPassword"
+            android:textColor="@color/text0"
+            android:textSize="16sp"
+            android:paddingLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/btn_bg_corner_blue"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="17sp" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/tv_forget_pwd"
+        android:text="忘记密码?"
+        android:padding="5dp"
+        android:textColor="@color/text0"
+        android:textSize="14sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"/>
+
+
+    </LinearLayout>
+</LinearLayout>

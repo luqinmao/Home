@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        >
+
+        <com.lqm.home.widget.RoundRectImageView
+            android:id="@+id/iv_head_img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@mipmap/default_img"
+            android:scaleType="fitXY"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            />
+
+        <TextView
+            android:id="@+id/tv_head_title"
+            android:text="李毅吧"
+            android:textColor="@color/black_light"
+            android:textSize="20sp"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_head_img"
+            android:layout_alignTop="@id/iv_head_img"
+            android:layout_marginLeft="15dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_head_guanzhu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_head_title"
+            android:layout_alignLeft="@id/tv_head_title"
+            android:layout_marginTop="20dp"
+            android:text="关注:300W"
+            android:textColor="@color/text0"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tv_head_tiezi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="帖子:200"
+            android:textColor="@color/text0"
+            android:textSize="16sp"
+            android:layout_alignBaseline="@+id/tv_head_guanzhu"
+            android:layout_alignBottom="@+id/tv_head_guanzhu"
+            android:layout_toRightOf="@+id/btn_guanzhu"
+            android:layout_toEndOf="@+id/btn_guanzhu" />
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_guanzhu"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:drawableLeft="@mipmap/test_icon"
+            android:layout_alignBottom="@id/iv_head_img"
+            android:layout_alignLeft="@id/tv_head_title"
+            android:layout_toRightOf="@id/iv_head_img"
+            android:text="关注"
+            android:background="@drawable/btn_regiter_selector"
+            android:textColor="@color/white"
+            android:textSize="13sp"/>
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/btn_qiangdao"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="26dp"
+            android:drawableLeft="@mipmap/test_icon"
+            android:layout_alignBottom="@id/iv_head_img"
+            android:layout_toRightOf="@id/btn_guanzhu"
+            android:text="签到"
+            android:background="@drawable/btn_regiter_selector"
+            android:textSize="13sp"
+            android:textColor="@color/white"
+            android:layout_marginLeft="25dp"
+            />
+
+        <TextView
+            android:id="@+id/tv_village_desc"
+            android:text="乡吧简介乡吧简介乡吧简介乡吧简介乡吧简介乡吧简介乡吧简介"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text0"
+            android:layout_marginTop="7dp"
+            android:layout_below="@id/iv_head_img"
+            android:paddingLeft="25dp"
+            android:paddingRight="25dp"
+            />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/line"
+        />
+
+</LinearLayout>

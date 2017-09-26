@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/topbar_home"
+        android:background="@color/blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title_text="主页"
+        app:title_text_size="18sp"
+        app:title_text_color="@color/white"
+        app:right_src="@mipmap/post"
+        app:left_src="@mipmap/menu"/>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_home"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+
+</LinearLayout>

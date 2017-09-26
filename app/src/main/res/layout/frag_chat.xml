@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+    >
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/chat_topbar"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_light"
+        app:right_src="@mipmap/ic_add"
+        app:title_text="聊天"
+        app:title_text_color="@color/white"
+        app:title_text_size="20sp"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_chat_title"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            app:tabIndicatorColor="@color/blue"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/unread_new_friend"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:layout_marginLeft="240dp"
+            android:layout_marginTop="8dp"
+            android:background="@mipmap/bg_unread"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="10sp"
+            android:visibility="visible"/>
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tab_chat_vp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+
+</LinearLayout>

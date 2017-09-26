@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="140dp"
+        android:layout_height="77dp"
+        android:background="@mipmap/bg_marker_view"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_photo"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="5dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <ImageView
+            android:id="@+id/iv_sex"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/iv_photo"
+            android:layout_alignTop="@id/iv_photo"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/iv_sex"
+            android:layout_alignTop="@id/iv_sex"
+            android:layout_marginLeft="5dp"
+            android:maxLines="1"
+            android:text="测试"
+            android:textColor="#000"
+            android:textSize="12sp"
+            />
+        <TextView
+            android:id="@+id/tv_distance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/iv_sex"
+            android:layout_below="@id/iv_sex"
+            android:layout_marginTop="5dp"
+            android:text="10km"
+            android:textColor="#353535"
+            android:textSize="12sp"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/topbar_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        app:title_text="微信文章"
+        app:title_text_size="18sp"
+        app:left_text_color="@color/white"
+        android:background="@color/blue_light"
+        app:left_src="@mipmap/return_white"
+        />
+
+        <android.support.design.widget.TabLayout
+            android:id="@+id/tab_weixin_title"
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            app:tabIndicatorColor="@color/blue"
+            app:tabSelectedTextColor="@color/black"
+            app:tabTextColor="@color/black"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp_weixin"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

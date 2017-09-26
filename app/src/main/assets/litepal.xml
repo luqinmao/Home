@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="notes" />
+    <version value="1" />
+
+    <list>
+        <mapping  class ="com.lqm.home.model.Note"/>
+    </list>
+
+</litepal>

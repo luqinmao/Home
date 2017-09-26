@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_photo"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@mipmap/default_photo"
+        />
+
+    <TextView
+        android:id="@+id/tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="发帖人名"
+        android:textSize="14sp"
+        android:textColor="#898989"
+        android:layout_alignTop="@id/iv_photo"
+        android:layout_toRightOf="@id/iv_photo"
+        android:layout_marginLeft="8dp"
+        />
+
+
+
+    <TextView
+        android:id="@+id/tv_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2016-05-12"
+        android:textSize="14sp"
+        android:textColor="#898989"
+        android:layout_below="@id/tv_name"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@id/tv_name"
+        />
+
+
+
+   <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="帖子标题"
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:layout_below="@id/iv_photo"
+        android:layout_alignLeft="@id/iv_photo"
+        android:layout_marginLeft="3dp"
+        />
+
+   <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="抱歉离线模式下不能使用例句功使用例句功能，请下载有道词典本地增强版"
+        android:layout_below="@id/tv_title"
+        android:textSize="16sp"
+        android:textColor="@color/text_black"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@id/iv_photo"
+        android:layout_marginLeft="3dp"
+        />
+
+    <com.lzy.ninegrid.NineGridView
+        android:id="@+id/iv_post_img"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        app:ngv_gridSpacing="3dp"
+        app:ngv_maxSize="9"
+        app:ngv_mode="grid"
+        app:ngv_singleImageRatio="1"
+        app:ngv_singleImageSize="250dp"
+        android:layout_below="@id/tv_desc"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="3dp"
+        />
+
+
+
+
+</RelativeLayout>

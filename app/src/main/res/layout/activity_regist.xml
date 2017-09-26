@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.lqm.home.widget.Topbar
+            android:id="@+id/regist_topbar"
+            app:title_text="注册"
+            app:title_text_size="16sp"
+            android:background="@color/blue_light"
+            app:title_text_color="@color/white"
+            app:left_src="@mipmap/return_white"
+            android:layout_width="match_parent"
+            android:layout_height="42dp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:hint="手机号码"
+            android:layout_marginTop="40dp"
+            android:drawableLeft="@mipmap/icon_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/LoginRegisterEditStyle" />
+
+        <RelativeLayout
+            android:layout_marginTop="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_code"
+                android:hint="短信验证码"
+                android:drawableLeft="@mipmap/icon_code"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/LoginRegisterEditStyle"
+                android:layout_centerVertical="true"
+                 />
+
+            <Button
+                android:id="@+id/btn_getcode"
+                android:text="获取验证码"
+                android:textSize="14sp"
+                android:background="@drawable/btn_bg_corner_orange"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:gravity="center"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/et_code"
+                android:layout_marginRight="13dp"
+                android:layout_height="30dp"
+                />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_psw"
+            android:hint="密码"
+            android:inputType="textPassword"
+            android:drawableLeft="@mipmap/icon_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="@style/LoginRegisterEditStyle"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="15dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="44dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:orientation="horizontal" >
+
+                <ImageView
+                    android:id="@+id/iv_hide"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/pass_hind" />
+
+                <ImageView
+                    android:id="@+id/iv_show"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:padding="10dp"
+                    android:src="@mipmap/pass_show"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_register"
+            android:text="确认，下一步"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="43dp"
+            android:background="@drawable/btn_regiter_selector" />
+
+    </LinearLayout>
+
+</RelativeLayout>

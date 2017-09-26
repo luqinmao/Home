@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/blue_light"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+            <ImageView
+                android:id="@+id/iv_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:padding="5dp"
+                android:src="@mipmap/return_white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center_vertical"
+                android:text="我的日志"
+                android:textColor="@color/white"
+                android:textSize="18sp" />
+
+            <ImageButton
+                android:id="@+id/ib_view"
+                android:layout_width="20dp"
+                android:layout_height="22dp"
+                android:background="@mipmap/menu"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                />
+
+        </RelativeLayout>
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rv_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+
+   <ImageButton
+       android:id="@+id/ib_add_notes"
+       android:layout_width="48dp"
+       android:layout_height="48dp"
+       android:background="@mipmap/add_notes"
+       android:layout_alignParentEnd="true"
+       android:layout_alignParentRight="true"
+       android:layout_alignParentBottom="true"
+       android:layout_marginRight="23dp"
+       android:layout_marginBottom="30dp"
+       />
+
+
+    <LinearLayout
+        android:id="@+id/ll_function_view"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:background="@color/blue_light"
+        android:layout_marginTop="2dp"
+        >
+        <View
+            android:layout_width="1dp"
+            android:background="@color/white"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:text="删除"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+
+        <View
+            android:layout_width="1dp"
+            android:background="@color/white"
+            android:layout_height="40dp" />
+
+        <Button
+            android:id="@+id/btn_select_cancel"
+            android:text="取消"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/white"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/btn_select_all"
+            android:text="全选"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="40dp"
+            android:background="@null"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            />
+        <View
+            android:layout_width="1dp"
+            android:background="@color/white"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<paths>
+    <!-- external-path:sd ；path:你的应用保存文件的根目录；name随便定义-->
+    <!-- root-path 手机存储根目录 -->
+    <root-path path="" name="lqm" />
+</paths>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+      xmlns:android="http://schemas.android.com/apk/res/android"
+      android:orientation="vertical"
+      android:layout_marginTop="5dp"
+      android:layout_marginBottom="5dp"
+      android:gravity="center_horizontal"
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_public_icon"
+        android:src="@mipmap/bg_my"
+        android:layout_width="42dp"
+        android:layout_height="42dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_public_name"
+        android:text="陆丰大塘"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tv_public_key"
+        android:text="公众号:lufengdatang"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        />
+
+</LinearLayout>

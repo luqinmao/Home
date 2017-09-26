@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="title_src" format="reference|color" />
+    <attr name="title_text" format="string" />
+    <attr name="title_text_size" format="dimension" />
+    <attr name="title_text_color" format="color" />
+    <attr name="left_src" format="reference|color" />
+    <attr name="left_text" format="string" />
+    <attr name="left_text_size" format="dimension" />
+    <attr name="left_text_color" format="color" />
+    <attr name="right_src" format="reference|color" />
+    <attr name="right_text" format="string" />
+    <attr name="right_text_size" format="dimension" />
+    <attr name="right_text_color" format="color" />
+
+    <declare-styleable name="Topbar">
+        <attr name="title_src" />
+        <attr name="title_text" />
+        <attr name="title_text_size" />
+        <attr name="title_text_color" />
+        <attr name="left_src" />
+        <attr name="left_text" />
+        <attr name="left_text_size" />
+        <attr name="left_text_color" />
+        <attr name="right_src" />
+        <attr name="right_text" />
+        <attr name="right_text_size" />
+        <attr name="right_text_color" />
+    </declare-styleable>
+
+    <!--OptionItemView-->
+    <declare-styleable name="OptionItemView">
+        <attr name="title"/>
+        <attr name="title_size" format="dimension"/>
+        <attr name="title_color" format="color"/>
+        <attr name="left_src" />
+        <attr name="left_text"/>
+        <attr name="left_text_size"/>
+        <attr name="left_image_margin_left" format="dimension"/>
+        <attr name="left_text_margin_left" format="dimension"/>
+        <attr name="left_image_margin_right" format="dimension"/>
+        <attr name="left_text_color"/>
+        <attr name="right_src" />
+        <attr name="right_text"/>
+        <attr name="right_text_size" />
+        <attr name="right_image_margin_left" format="dimension"/>
+        <attr name="right_image_margin_right" format="dimension"/>
+        <attr name="right_text_margin_right" format="dimension"/>
+        <attr name="right_text_color"/>
+        <attr name="splite_mode" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="NetworkImageView">
+        <attr name="radius" format="dimension" />
+    </declare-styleable>
+
+    <attr name="rightPadding" format="dimension" />
+
+    <declare-styleable name="SlidingMenu">
+        <attr name="rightPadding" />
+    </declare-styleable>
+
+    <declare-styleable name="TasksCompletedView">
+        <attr name="radius1" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="circleColor" format="color" />
+        <attr name="ringColor" format="color" />
+        <attr name="lineColor" format="color" />
+        <attr name="ringColor1" format="color" />
+        <attr name="aRingButton" format="reference" />
+    </declare-styleable>
+
+
+
+</resources>

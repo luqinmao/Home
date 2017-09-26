@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.lqm.home"
+    >
+
+    <!-- 视频录制的权限star   -->
+    <!-- sd卡写入权限  -->
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"/>
+    <!-- 硬件支持   -->
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <!-- 视频录制的权限end   -->
+
+    <!-- 权限声明 -->
+    <!-- 访问网络状态-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <!-- 控制呼吸灯，振动器等，用于新消息提醒 -->
+    <uses-permission android:name="android.permission.FLASHLIGHT"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <!-- 外置存储存取权限 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <!-- 多媒体相关 -->
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+
+    <!-- 如果需要实时音视频通话模块，下面的权限也是必须的。否则，可以不加 -->
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+
+    <uses-feature android:name="android.hardware.camera"/>
+    <uses-feature android:name="android.hardware.camera.autofocus"/>
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <!-- SDK 权限申明, 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <!-- 和下面的 uses-permission 一起加入到你的 AndroidManifest 文件中。 -->
+    <permission
+        android:name="com.lqr.wechat.permission.RECEIVE_MSG"
+        android:protectionLevel="signature"/>
+    <!-- 接收 SDK 消息广播权限， 第三方 APP 接入时，请将 com.netease.nim.demo 替换为自己的包名 -->
+    <uses-permission android:name="com.lqr.wechat.RECEIVE_MSG"/>
+
+    <!--mob短信验证码-->
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <!-- 【必须】 信鸽SDK所需权限   -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <!-- 【常用】 信鸽SDK所需权限 -->
+    <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+
+    <!--高德地图-->
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <!-- 这个权限用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- 这个权限用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <!-- 写入扩展存储，向扩展卡写入数据，用于写入离线定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 访问网络，网络定位需要上网 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/app_logo"
+        android:label="@string/app_name"
+        android:name=".app.App"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--###############################百度地图 begin###############################-->
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="Kgq1OIZe1GwA4xRru76gZH1TTyWOHDKn" />
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+        </service>
+
+        <!--###############################高的地图 end###############################-->
+
+        <!--###############################网易云信配置 begin###############################-->
+        <!-- APP key, 可以在这里设置，也可以在 SDKOptions 中提供。
+            如果 SDKOptions 中提供了，取 SDKOptions 中的值。 -->
+        <meta-data
+            android:name="com.netease.nim.appKey"
+            android:value="043aaaf5cdfb5403be043c2ce04cecdc"/>
+        <!-- 声明云信后台服务，如需保持后台推送，使用独立进程效果会更好。 -->
+        <service
+            android:name="com.netease.nimlib.service.NimService"
+            android:process=":core"/>
+
+        <service
+            android:name="com.netease.nimlib.service.NimService$Aux"
+            android:process=":core"/>
+
+        <!-- 云信SDK的监视系统启动和网络变化的广播接收器，用户开机自启动以及网络变化时候重新登录，
+            保持和 NimService 同一进程 -->
+        <receiver
+            android:name="com.netease.nimlib.service.NimReceiver"
+            android:exported="false"
+            android:process=":core">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"/>
+            </intent-filter>
+        </receiver>
+
+        <!-- 云信进程间通信 Receiver -->
+        <receiver android:name="com.netease.nimlib.service.ResponseReceiver"/>
+
+        <!-- 安卓保活配置 -->
+        <service
+            android:name="com.netease.cosine.core.CosineService"
+            android:process=":cosine">
+        </service>
+
+        <receiver
+            android:name="com.netease.cosine.target.CosineReceiver"
+            android:exported="true"
+            android:process=":cosine">
+        </receiver>
+
+        <meta-data
+            android:name="com.netease.cosine.target"
+            android:value=""/>
+        <meta-data
+            android:name="com.netease.cosine.target.receiver"
+            android:value="com.netease.nimlib.service.NimReceiver"/>
+
+        <!--###############################网易云信配置 end###############################-->
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait">
+        </activity>
+        <activity android:name=".activity.SplashActivity"
+                  android:launchMode="singleTask"
+                  android:screenOrientation="portrait" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".activity.GuideActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.WritePostActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.PostDetailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".activity.WebViewActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SettingActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.NotesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.LoginActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.MyInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.WriteNotesActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.FeedBackActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.AboutActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.RegisterActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.RegisterNextActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.LoginOrRegistActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.RegionActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SignActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SelectHomeActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.CreateVillageActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.WeiXinArticleActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ArticleDetailActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.FunnyActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.BaiDuImageActivity" android:screenOrientation="portrait" />
+
+        <activity
+            android:name="com.lzy.imagepicker.ui.ImagePreviewDelActivity"
+            android:theme="@style/ImagePickerThemeFullScreen"/>
+
+        <!--  ========================= 云信  =======================-->
+        <activity android:name=".activity.SessionActivity" android:screenOrientation="portrait"
+                  android:launchMode="singleTop"/>
+        <activity android:name=".activity.ImageWatchActivity" android:screenOrientation="portrait"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".activity.FileWallActivity" android:screenOrientation="portrait"
+            android:launchMode="singleTask"/>
+        <activity android:name=".activity.UserInfoActivity" android:screenOrientation="portrait"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".activity.FilePreviewActivity" android:screenOrientation="portrait"
+                  android:launchMode="singleTask"/>
+        <activity android:name=".activity.NewFriendActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.TeamCheatInfoActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.TeamNameSetActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.TeamAnnouncementEditActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.TeamCheatCreateActvitiy" android:screenOrientation="portrait" />
+        <activity android:name=".activity.TeamCheatRemoveMemberActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.SearchUserActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.PostscriptActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ShowBigImageActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ChangeNameActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ChangeSignatureActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.QRCodeCardActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.ScanActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.AliasActivity" android:screenOrientation="portrait" />
+        <activity android:name=".activity.NearbyMapActivity" android:screenOrientation="portrait" />
+
+
+
+        <!--mob-->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="stateHidden|adjustResize"/>
+
+
+        <!-- ===============     信鸽推送 start ================== -->
+
+        <!-- 【必须】 信鸽receiver广播接收 -->
+        <receiver android:name="com.tencent.android.tpush.XGPushReceiver"
+                  android:process=":xg_service_v3" >
+            <intent-filter android:priority="0x7fffffff" >
+                <!-- 【必须】 信鸽SDK的内部广播 -->
+                <action android:name="com.tencent.android.tpush.action.SDK" />
+                <action android:name="com.tencent.android.tpush.action.INTERNAL_PUSH_MESSAGE" />
+                <!-- 【必须】 系统广播：开屏和网络切换 -->
+                <action android:name="android.intent.action.USER_PRESENT" />
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+                <!-- 【可选】 一些常用的系统广播，增强信鸽service的复活机会，请根据需要选择。当然，你也可以添加APP自定义的一些广播让启动service -->
+                <action android:name="android.bluetooth.adapter.action.STATE_CHANGED" />
+                <action android:name="android.intent.action.ACTION_POWER_CONNECTED" />
+                <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" />
+            </intent-filter>
+        </receiver>
+
+        <!-- 【注意】 如果被打开的activity是启动模式为SingleTop，SingleTask或SingleInstance，请根据通知的异常自查列表第8点处理-->
+        <activity
+            android:name="com.tencent.android.tpush.XGPushActivity"
+            android:exported="false" >
+            <intent-filter>
+                <!-- 若使用AndroidStudio，请设置android:name="android.intent.action"-->
+                <action android:name="android.intent.action" />
+            </intent-filter>
+        </activity>
+
+        <!-- 【必须】 信鸽service -->
+        <service
+            android:name="com.tencent.android.tpush.service.XGPushServiceV3"
+            android:exported="true"
+            android:persistent="true"
+            android:process=":xg_service_v3" />
+
+
+        <!-- 【必须】 提高service的存活率 -->
+        <service
+            android:name="com.tencent.android.tpush.rpc.XGRemoteService"
+            android:exported="true">
+            <intent-filter>
+                <!-- 【必须】 请修改为当前APP包名 .PUSH_ACTION, 如demo的包名为：com.qq.xgdemo -->
+                <action android:name="com.lqm.home.PUSH_ACTION" />
+            </intent-filter>
+        </service>
+
+
+        <!-- 【必须】 【注意】authorities修改为 包名.AUTH_XGPUSH, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+            android:name="com.tencent.android.tpush.XGPushProvider"
+            android:authorities="com.lqm.home.AUTH_XGPUSH"
+            android:exported="true"/>
+
+        <!-- 【必须】 【注意】authorities修改为 包名.TPUSH_PROVIDER, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+            android:name="com.tencent.android.tpush.SettingsContentProvider"
+            android:authorities="com.lqm.home.TPUSH_PROVIDER"
+            android:exported="false" />
+
+        <!-- 【必须】 【注意】authorities修改为 包名.TENCENT.MID.V3, 如demo的包名为：com.qq.xgdemo-->
+        <provider
+            android:name="com.tencent.mid.api.MidProvider"
+            android:authorities="com.lqm.home.TENCENT.MID.V3"
+            android:exported="true" >
+        </provider>
+
+        <!-- 【必须】 请将YOUR_ACCESS_ID修改为APP的AccessId，“21”开头的10位数字，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_ID"
+            android:value="2100259284" />
+        <!-- 【必须】 请将YOUR_ACCESS_KEY修改为APP的AccessKey，“A”开头的12位字符串，中间没空格 -->
+        <meta-data
+            android:name="XG_V2_ACCESS_KEY"
+            android:value="AC2K78W2X8YF" />
+
+        <!-- ===============     信鸽推送 end ================== -->
+
+        <!--authorities="你的包名+fileprovider" -->
+        <provider
+            android:authorities="com.lqm.home.fileprovider"
+            android:name="android.support.v4.content.FileProvider"
+            android:grantUriPermissions="true"
+            android:exported="false">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths"/>
+        </provider>
+
+    </application>
+
+</manifest>

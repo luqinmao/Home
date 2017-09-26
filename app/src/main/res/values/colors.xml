@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="transparent">#00ffffff</color>
+    <color name="top_bar_bg">#262B27</color>
+    <color name="main">#4FC1E9</color>
+    <color name="main_bg">#F5F5F5</color>
+    <color name="line">#e7e7e7</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="black_light">#3A3A3A</color>
+    <color name="orange">#FF5301</color>
+    <color name="red_light">#FF8880</color>
+    <color name="purple">#A577FB</color>
+
+    <color name="blue">#1189F8</color>
+    <color name="blue_light">#2395FF</color>
+
+    <color name="text0">#464646</color>
+    <color name="text1">#7e7e7e</color>
+    <color name="text2">#969696</color>
+    <color name="text3">#c8969696</color>
+    <color name="text4">#DDDDDD</color>
+    <color name="text5">#EFEFEF</color>
+
+
+    <color name="text_black">#000000</color>  <!--主内容 -->
+    <color name="text_semi">#353535</color>  <!--大段的说明内容而且属于主要内容-->
+    <color name="text_grey">#88888888</color>  <!--次要内容 -->
+    <color name="text_light">#b2b2b2</color>  <!--时间戳与表单缺省值 -->
+
+    <color name="text_blue">#576b95</color>  <!--链接用色 -->
+    <color name="text_green">#09bb07</color>  <!--完成字样色 -->
+    <color name="text_red">#e64340</color>  <!--出错用色 -->
+
+
+    <!--CSDN_LQR-->
+    <color name="select_down">#c8969696</color>
+    <color name="gray_normal">#464646</color>
+    <color name="gray0">#464646</color>
+    <color name="gray1">#7e7e7e</color>
+    <color name="gray2">#969696</color>
+    <color name="gray3">#c8969696</color>
+    <color name="gray4">#F5F5F5</color>
+    <color name="gray5">#EBEBEB</color>
+    <color name="gray6">#FBFBFB</color>
+    <color name="gray7">#999999</color>
+    <color name="gray8">#D9D9D9</color>
+    <color name="gray9">#DBDFE0</color>
+
+    <color name="red0">#ff0000</color>
+    <color name="red1">#D84E43</color>
+
+    <color name="green0">#45C01A</color>
+    <color name="green1">#45C01A</color>
+    <color name="green2">#A3DEA3</color>
+    <color name="green3">#1AAD19</color>
+
+    <color name="black0">#000000</color>
+    <color name="black1">#99000000</color>
+
+    <!--遮盖层颜色-->
+    <color name="mask">#32000000</color>
+    <!--快速索引bar颜色-->
+    <color name="side_bar">#919091</color>
+    <color name="side_bar_pressed">#BFBFBF</color>
+    <!--================      end =================-->
+</resources>

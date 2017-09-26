@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.lqm.home.widget.Topbar
+        android:id="@+id/topbar_about"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/blue_light"
+        app:left_src="@mipmap/return_white"
+        app:title_text="我要反馈"
+        app:title_text_color="@color/white"
+        app:title_text_size="16sp"
+        app:right_text="提交"
+        app:right_text_color="@color/white"
+        app:right_text_size="15sp"
+        />
+
+    <View
+        android:background="@color/line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="我来反馈"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@mipmap/test_icon"
+            android:drawablePadding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <View
+            android:background="@color/line"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp" />
+
+        <EditText
+            android:id="@+id/et_content"
+            android:gravity="top"
+            android:hint="有什么问题可以反馈给我，感谢您的建议"
+            android:textSize="12sp"
+            android:background="@drawable/edit_login_regist_selector"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="180dp" />
+
+        <TextView
+            android:text="联系方式"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:drawableLeft="@mipmap/test_icon"
+            android:drawablePadding="3dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/et_contact"
+            android:hint="请留下你的手机/QQ/邮箱/微信"
+            android:textSize="12sp"
+            android:background="@drawable/edit_login_regist_selector"
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+        <TextView
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="10dp"
+            android:text="更多问题请加交流群:120920655"
+            android:textSize="14sp"
+            android:textColor="@color/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+</LinearLayout>

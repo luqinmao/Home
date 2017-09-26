@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!-- 三种状态三种颜色，按下，可用 ，不可用 -->
+    <item android:drawable="@drawable/btn_bg_corner_orange" android:state_pressed="true"/>
+    <item android:drawable="@drawable/btn_bg_corner_gray" android:state_enabled="false"/>
+    <item android:drawable="@drawable/btn_bg_corner_blue" android:state_enabled="true"/>
+    <item android:drawable="@drawable/btn_bg_corner_gray"/>
+
+</selector>

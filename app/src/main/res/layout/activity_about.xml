@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:text="copright@2017|All rights reserved"
+        android:textColor="@color/text0"
+        android:textSize="10sp" />
+
+    <LinearLayout
+        android:id="@+id/ll_desc"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <com.lqm.home.widget.Topbar
+            android:id="@+id/topbar_about"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:background="@color/blue_light"
+            app:left_src="@mipmap/return_white"
+            app:title_text="关于我们"
+            app:title_text_color="@color/white"
+            app:title_text_size="16sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY"
+            android:layout_marginTop="50dp"
+            android:src="@mipmap/app_logo" />
+
+        <TextView
+            android:text="乡吧"
+            android:textSize="30dp"
+            android:textColor="@color/text0"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="有什么问题可以联系我"
+            android:textSize="13sp"
+            android:textColor="@color/text1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="QQ群: 120920655"
+            android:textSize="13sp"
+            android:textColor="@color/text1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="QQ:  1002438809"
+            android:textSize="13sp"
+            android:textColor="@color/text1"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:text="微信:  luqinmao"
+            android:textSize="13sp"
+            android:textColor="@color/text1"
+            android:layout_marginTop="5dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/iv_pay"
+        android:src="@mipmap/icon_pay"
+        android:layout_centerHorizontal="true"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_below="@id/ll_desc"
+        android:layout_marginTop="40dp"
+        />
+
+</RelativeLayout>
